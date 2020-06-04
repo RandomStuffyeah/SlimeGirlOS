@@ -588,7 +588,7 @@ exit:
 	writefail_msg		db 'Could not write file. Write protected or invalid filename?', 13, 10, 0
 	exists_msg		db 'Target file already exists!', 13, 10, 0
 
-	version_msg		db 'TachyonOS ', OS_VERSION_STRING, 13, 10, 0
+	version_msg		db 'SlimeGirlOS ', OS_VERSION_STRING, 13, 10, 0
 
 	exit_string		db 'EXIT', 0
 	help_string		db 'HELP', 0

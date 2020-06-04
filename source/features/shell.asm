@@ -1,31 +1,6 @@
 start_shell:
-	BOOTMSG 'Checking for custom background'
-	call check_for_background
-	BOOTOK
-	
-	BOOTMSG 'Loading custom icons...'
-	call os_add_custom_icons
-	BOOTOK
-
-	BOOTMSG 'Loading menu data file...'
-	mov ax, menu_file_name		; Load menu file for UI Shell
-	mov cx, 32768
-	call os_load_file
-	BOOTFATAL_IFCARRY 'Error loading file'
-	
-	mov dx, 2			; Allocate 1024 bytes (2*512) to the file
-	call os_memory_allocate
-	BOOTFATAL_IFCARRY 'Could not allocate memory'
-	
-	mov [menu_data_handle], bh	; Remember the memory handle
-		
-	mov si, 32768			; Write the menu file to the memory handle
-	call os_memory_write
-	BOOTOK
-	
-	BOOTMSG 'Entering TOSMUI...'
-	mov ax, BOOT_DELAY		; Delay to show information
-	call os_pause
+	call os_command_line
+	jmp start_shell
 
 load_menu:
 	call get_menu_data		; Collect menu information
