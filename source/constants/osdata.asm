@@ -1,9 +1,9 @@
 
 ; Version numbers and names
-%DEFINE OS_NAME_SHORT			'TachyonOS'
-%DEFINE OS_NAME_LONG			'Tachyon Operating System'
+%DEFINE OS_NAME_SHORT			'SlimeGirlOS'
+%DEFINE OS_NAME_LONG			'SlimeGirl Operating System'
 %DEFINE OS_VERSION_NUMBER		12
-%DEFINE OS_VERSION_STRING		'OS Build #12'
+%DEFINE OS_VERSION_STRING		'Build #12'
 
 ; Filenames to search for
 %DEFINE OS_KERNEL_FILENAME		'KERNEL.BIN'
