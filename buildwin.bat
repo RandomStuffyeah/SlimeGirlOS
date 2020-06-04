@@ -27,6 +27,7 @@ echo Mounting disk image...
 imdisk -a -f disk_images\tachyonos.flp -s 1440K -m B:
 
 echo Copying kernel and applications to disk image...
+del b:\*.*
 copy source\kernel.bin b:\
 copy source\zkernel.sys b:\
 copy programs\*.bin b:\
